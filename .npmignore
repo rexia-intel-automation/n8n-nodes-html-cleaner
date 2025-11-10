@@ -1,0 +1,10 @@
+# Código fonte e configs
+src/
+nodes/**/*.ts
+tsconfig.json
+.gitignore
+.github/
+.vscode/
+*.log
+tests/
+examples/

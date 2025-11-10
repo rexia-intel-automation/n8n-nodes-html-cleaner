@@ -1,0 +1,23 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Build
+dist/
+
+# Logs e cache
+*.log
+npm-debug.log*
+*.tsbuildinfo
+
+# Configs locais
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Testes e docs
+test/
+tests/
+docs/
+examples/
