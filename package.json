@@ -1,26 +1,27 @@
 {
-  "name": "n8n-nodes-html-cleaner",
-  "version": "0.1.1",
+  "name": "@mohamad-rexia/n8n-nodes-html-cleaner",
+  "version": "0.1.0",
   "description": "HTML Cleaner node for n8n - cleans and sanitizes HTML content for LLM and scraping workflows.",
+  "author": "RexIA <mohamad@rexia.com.br>",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner.git" },
+  "bugs": { "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner/issues", "email": "mohamad@rexia.com.br" },
+  "homepage": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner#readme",
+
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "prepublishOnly": "npm run build"
-  },
+  "scripts": { "build": "tsc -p tsconfig.json", "prepublishOnly": "npm run build" },
   "files": ["dist", "nodes/**/*.json", "nodes/**/*.svg"],
-  "keywords": ["n8n", "html", "cleaner", "llm", "workflow", "node"],
-  "author": "RexIA <contato@rexia.com.br>",
-  "license": "MIT",
   "engines": { "node": ">=18" },
-  "devDependencies": {
-    "@types/node": "^20.12.12",
-    "typescript": "^5.6.3"
-  },
+
+  "devDependencies": { "@types/node": "^20.12.12", "typescript": "^5.6.3" },
   "peerDependencies": { "n8n-workflow": ">=1.17.0" },
+
   "n8n": {
     "nodes": [
       { "type": "dist/nodes/HtmlCleaner/HtmlCleaner.node.js", "version": 1 }
     ]
-  }
+  },
+
+  "publishConfig": { "access": "public" }
 }
