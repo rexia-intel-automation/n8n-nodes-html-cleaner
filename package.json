@@ -20,7 +20,10 @@
     "build": "tsc -p tsconfig.json && npm run copy-icons",
     "copy-icons": "mkdir -p dist/nodes/HtmlCleaner && cp nodes/HtmlCleaner/*.svg dist/nodes/HtmlCleaner/ 2>/dev/null || true",
     "prepublishOnly": "npm run build",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "prepack": "npm run build",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
   },
   "files": [
     "dist"
