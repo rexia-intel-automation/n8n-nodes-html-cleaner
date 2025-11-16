@@ -10,8 +10,7 @@
     "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner.git"
   },
   "bugs": {
-    "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner/issues",
-    "email": "mohamad@rexia.com.br"
+    "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner/issues"
   },
   "homepage": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner#readme",
 
@@ -24,8 +23,7 @@
     "clean": "rm -rf dist"
   },
   "files": [
-    "dist",
-    "nodes/**/*.svg"
+    "dist"
   ],
   "engines": {
     "node": ">=18"
@@ -41,6 +39,7 @@
 
   "n8n": {
     "n8nNodesApiVersion": 1,
+    "credentials": [],
     "nodes": [
       "dist/nodes/HtmlCleaner/HtmlCleaner.node.js"
     ]
