@@ -1,27 +1,52 @@
 {
   "name": "@mohamad-rexia/n8n-nodes-html-cleaner",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "HTML Cleaner node for n8n - cleans and sanitizes HTML content for LLM and scraping workflows.",
+  "keywords": ["n8n-community-node-package", "n8n", "html", "cleaner", "sanitize", "scraping", "llm"],
   "author": "RexIA <mohamad@rexia.com.br>",
   "license": "MIT",
-  "repository": { "type": "git", "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner.git" },
-  "bugs": { "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner/issues", "email": "mohamad@rexia.com.br" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner/issues",
+    "email": "mohamad@rexia.com.br"
+  },
   "homepage": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner#readme",
 
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
-  "scripts": { "build": "tsc -p tsconfig.json", "prepublishOnly": "npm run build" },
-  "files": ["dist", "nodes/**/*.json", "nodes/**/*.svg"],
-  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run copy-icons",
+    "copy-icons": "mkdir -p dist/nodes/HtmlCleaner && cp nodes/HtmlCleaner/*.svg dist/nodes/HtmlCleaner/ 2>/dev/null || true",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "files": [
+    "dist",
+    "nodes/**/*.svg"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
 
-  "devDependencies": { "@types/node": "^20.12.12", "typescript": "^5.6.3" },
-  "peerDependencies": { "n8n-workflow": ">=1.17.0" },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=1.17.0"
+  },
 
   "n8n": {
+    "n8nNodesApiVersion": 1,
     "nodes": [
-      { "type": "dist/nodes/HtmlCleaner/HtmlCleaner.node.js", "version": 1 }
+      "dist/nodes/HtmlCleaner/HtmlCleaner.node.js"
     ]
   },
 
-  "publishConfig": { "access": "public" }
+  "publishConfig": {
+    "access": "public"
+  }
 }
