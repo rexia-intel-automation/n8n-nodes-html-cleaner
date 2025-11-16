@@ -1,7 +1,8 @@
 {
   "name": "@mohamad-rexia/n8n-nodes-html-cleaner",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "HTML Cleaner node for n8n - cleans and sanitizes HTML content for LLM and scraping workflows.",
+  "keywords": ["n8n-community-node-package"],
   "author": "RexIA <mohamad@rexia.com.br>",
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/rexia-intel-automation/n8n-nodes-html-cleaner.git" },
@@ -18,8 +19,9 @@
   "peerDependencies": { "n8n-workflow": ">=1.17.0" },
 
   "n8n": {
+    "n8nNodesApiVersion": 1,
     "nodes": [
-      { "type": "dist/nodes/HtmlCleaner/HtmlCleaner.node.js", "version": 1 }
+      "dist/nodes/HtmlCleaner/HtmlCleaner.node.js"
     ]
   },
 
